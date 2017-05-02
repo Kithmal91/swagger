@@ -17,7 +17,7 @@ public class SwaggerBootstrap extends HttpServlet {
         beanConfig.setTitle("Test API with rest easy");
         beanConfig.setSchemes(new String[]{"http"});
         beanConfig.setHost("localhost:8080");
-        beanConfig.setBasePath("/api");
+        beanConfig.setBasePath("/swagger-resteasy/api");
         beanConfig.setResourcePackage("com.amithfernando.swagger.resteasy.api.resources");
         beanConfig.setScan(true);
     }

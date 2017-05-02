@@ -6,10 +6,9 @@
 package com.amithfernando.swagger.resteasy.api.resources;
 
 import com.amithfernando.swagger.resteasy.api.exception.ApiException;
+import com.amithfernando.swagger.resteasy.api.models.TestResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -19,18 +18,12 @@ import javax.ws.rs.core.Response;
  *
  * @author Amith
  */
-@Path("/test")
-@Api(value = "/test")
+@Path("/test2")
+@Api(value = "/test2")
 @Produces({"application/json"})
-public interface TestResource {
+public interface TestResource2 {
 
     @GET
     @Path("/hello")
-    @ApiOperation(value = "Hello Test",
-            notes = "Returns a Hello World reposnse"
-    )
-    @ApiResponses(value = {
-        @ApiResponse(code = 404, message = "not found")})
     Response testResource() throws ApiException;
-
 }
