@@ -2,6 +2,8 @@
 
 Swagger is rest api documentation framework.This repository contains spring boot and jax-rs code examples
 
+## Spring Boot
+
 Following dependancies used for documentation geneartion with spring boot.
 
 ```xml
@@ -17,6 +19,8 @@ Following dependancies used for documentation geneartion with spring boot.
     <version>2.6.1</version>
 </dependency>
 ```
+
+## JAX-RS (reast-easy)
 
 For jax-rs project we need to deploy swagger ui sperately. We can generate swagger.json file from the jax-rs application. Using swagger.json url we can generate documenttion with seprately deployed swagger ui. 
 
