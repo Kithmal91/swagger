@@ -6,6 +6,7 @@
 package com.amithfernando.swagger.springboot.api.config.swagger;
 
 import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -62,7 +63,7 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
     }
 
     private Predicate<String> internalPaths() {
-        return PathSelectors.any();
+        return Predicates.not(PathSelectors.regex("/error.*"));
     }
 
 }
