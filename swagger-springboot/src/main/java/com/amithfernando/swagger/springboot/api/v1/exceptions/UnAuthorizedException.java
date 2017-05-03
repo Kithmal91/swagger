@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.amithfernando.swagger.springboot.api.v1.exceptions;
 
 /**
  *
  * @author Amith
  */
-public class ApiException extends RuntimeException{
-  private int code;
-  public ApiException (int code, String msg) {
-    super(msg);
-    this.code = code;
-  }
+public class UnAuthorizedException extends ApiException {
+
+    private int code;
+
+    public UnAuthorizedException(int code, String msg) {
+        super(403, msg);
+        this.code = code;
+    }
 }

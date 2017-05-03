@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.amithfernando.swagger.springboot.api.v1.resources;
 
 import com.amithfernando.swagger.springboot.api.v1.exceptions.NotFoundException;
+import com.amithfernando.swagger.springboot.api.v1.exceptions.UnAuthorizedException;
 import com.amithfernando.swagger.springboot.api.v1.model.MyApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -22,5 +22,11 @@ public class AbstractResource {
     @ExceptionHandler(NotFoundException.class)
     public MyApiResponse exception(NotFoundException e) {
         return new MyApiResponse(MyApiResponse.ERROR, e.getMessage());
+    }
+
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    @ExceptionHandler(UnAuthorizedException.class)
+    public MyApiResponse exception(UnAuthorizedException e) {
+        return new MyApiResponse(MyApiResponse.WARNING, e.getMessage());
     }
 }
