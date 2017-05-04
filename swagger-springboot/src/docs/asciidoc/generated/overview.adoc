@@ -1,0 +1,26 @@
+= Swagger Spring Boot
+
+== Overview
+Test API
+
+=== Version information
+Version: 1.0.0
+
+=== Contact information
+Contact: Amith Fernando
+Contact Email: amith@fortunaglobal.com
+
+=== URI scheme
+Host: localhost:8090
+BasePath: /
+
+=== Tags
+
+* writer-resource: Writer Resource
+* singer-resource: Singer Resource
+* application: Application
+* category-resource: Category Resource
+* song-resource: Song Resource
+* composer-resource: Composer Resource
+
+

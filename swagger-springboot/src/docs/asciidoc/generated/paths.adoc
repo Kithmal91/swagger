@@ -1,0 +1,1468 @@
+== Paths
+=== welocme
+----
+DELETE /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+POST /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+GET /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+HEAD /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+PATCH /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+OPTIONS /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== welocme
+----
+PUT /
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|string
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* application
+
+=== deleteCategory
+----
+DELETE /categorys
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|category|category|true|<<Category>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|No Content
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* category-resource
+
+=== saveCategory
+----
+POST /categorys
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|category|category|true|<<Category>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Category>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* category-resource
+
+=== getAllCategorys
+----
+GET /categorys
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Category>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* category-resource
+
+=== updateCategory
+----
+PUT /categorys
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|category|category|true|<<Category>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Category>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* category-resource
+
+=== Find category by status
+----
+GET /categorys/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Category>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* Get Categorys
+
+=== Find category by ID
+----
+GET /categorys/{id}
+----
+
+==== Description
+:hardbreaks:
+Returns a category by id
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|Nice!|<<Category>>
+|400|Invalid ID supplied|<<MyApiResponse>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Category not found|<<MyApiResponse>>
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* Get Categorys
+
+=== getSongsByCategorysId
+----
+GET /categorys/{id}/songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsByCategorysId
+----
+GET /categorys/{id}/songs/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== deleteComposer
+----
+DELETE /composers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|composer|composer|true|<<Composer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|No Content
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== saveComposer
+----
+POST /composers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|composer|composer|true|<<Composer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Composer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== getAllComposers
+----
+GET /composers
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Composer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== updateComposer
+----
+PUT /composers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|composer|composer|true|<<Composer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Composer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== getComposersByStatus
+----
+GET /composers/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Composer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== getComposersById
+----
+GET /composers/{id}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Composer>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* composer-resource
+
+=== getSongsByComposerId
+----
+GET /composers/{id}/songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsByComposerId
+----
+GET /composers/{id}/songs/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== deleteSinger
+----
+DELETE /singers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|singer|singer|true|<<Singer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|No Content
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== saveSinger
+----
+POST /singers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|singer|singer|true|<<Singer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Singer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== getAllSingers
+----
+GET /singers
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Singer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== updateSinger
+----
+PUT /singers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|singer|singer|true|<<Singer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Singer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== getSingersByStatus
+----
+GET /singers/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Singer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== getSingersById
+----
+GET /singers/{id}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Singer>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* singer-resource
+
+=== getSongsBySingerId
+----
+GET /singers/{id}/songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsBySingerId
+----
+GET /singers/{id}/songs/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== deleteSong
+----
+DELETE /songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|song|song|true|<<Song>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|No Content
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== saveSong
+----
+POST /songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|song|song|true|<<Song>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getAllSongs
+----
+GET /songs
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== updateSong
+----
+PUT /songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|song|song|true|<<Song>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsByStatus
+----
+GET /songs/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsById
+----
+GET /songs/{id}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== deleteWriter
+----
+DELETE /writers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|writer|writer|true|<<Writer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|No Content
+|204|No Content|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== saveWriter
+----
+POST /writers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|writer|writer|true|<<Writer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Writer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== getAllWriters
+----
+GET /writers
+----
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Writer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== updateWriter
+----
+PUT /writers
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|BodyParameter|writer|writer|true|<<Writer>>|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Writer>>
+|201|Created|No Content
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== getWritersByStatus
+----
+GET /writers/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Writer>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== getWritersById
+----
+GET /writers/{id}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Writer>>
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* writer-resource
+
+=== getSongsByWritersId
+----
+GET /writers/{id}/songs
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+
+=== getSongsByWritersId
+----
+GET /writers/{id}/songs/status/{status}
+----
+
+==== Parameters
+[options="header"]
+|===
+|Type|Name|Description|Required|Schema|Default
+|PathParameter|id|id|true|integer (int64)|
+|PathParameter|status|status|true|string|
+|===
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|<<Song>> array
+|401|Unauthorized|No Content
+|403|Forbidden|No Content
+|404|Not Found|No Content
+|===
+
+==== Consumes
+
+* application/json
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* song-resource
+

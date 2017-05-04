@@ -1,0 +1,62 @@
+== Definitions
+=== Category
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|status||false|enum (ACTIVE, DEACTIVE, DELETED)|
+|===
+
+=== Composer
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|status||false|enum (ACTIVE, DEACTIVE, DELETED)|
+|===
+
+=== MyApiResponse
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|code||false|integer (int32)|
+|message||false|string|
+|type||false|string|
+|===
+
+=== Singer
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|status||false|enum (ACTIVE, DEACTIVE, DELETED)|
+|===
+
+=== Song
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|category||false|<<Category>>|
+|composer||false|<<Composer>>|
+|description||false|string|
+|id||false|integer (int64)|
+|lyrics||false|string|
+|singer||false|<<Singer>>|
+|singlishName||false|string|
+|sinhalaName||false|string|
+|status||false|enum (ACTIVE, DEACTIVE, DELETED)|
+|writer||false|<<Writer>>|
+|===
+
+=== Writer
+[options="header"]
+|===
+|Name|Description|Required|Schema|Default
+|id||false|integer (int64)|
+|name||false|string|
+|status||false|enum (ACTIVE, DEACTIVE, DELETED)|
+|===
+
